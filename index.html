@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>
+            vitals
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            input[type=button],
+            input[type=submit] {
+              background-color: #62529c;
+              border: none;
+              color: #fff;
+              padding: 15px 30px;
+              text-decoration: none;
+              margin-left: 620px;
+              cursor: pointer;
+              text-align: center;
+              font-size: 1.5rem;
+              font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            </style>
+            
+    </head>
+    <body>
+
+
+        <h1>
+            VITALS
+        </h1>        
+        <img align="right"src="images/hos.jpg"width="800px"alt="">
+        <h2>
+            HEART RATE
+            </h2>
+        <div class="form__group">
+            <input type="text" class="form__input" id="numb" placeholder="Heart rate" required="" />
+            <label for="name" class="form__label">Enter your heart rate</label>
+        </div>
+        <br>
+        <h2>
+            BLOOD PRESSURE
+        </h2>
+        <div class="form__group">
+            <input type="text" class="form__input" id="name" placeholder="Blood pressure" required="" />
+            <label for="name" class="form__label">Enter your blood pressure</label>
+        </div>
+        <br>
+        <h2>
+            O2 RATE
+        </h2>
+        <div class="form__group">
+            <input type="text" class="form__input" id="name" placeholder="o2" required="" />
+            <label for="name" class="form__label">Enter your oxygen rate</label>
+        </div>
+        <br>
+        <h2>
+            WEIGHT
+        </h2>
+        <div class="form__group">
+            <input type="text" class="form__input" id="name" placeholder="Weight" required="" />
+            <label for="name" class="form__label">Enter your Weight</label>
+        </div>
+        <br> 
+        <h2>
+            <script>
+            function myFunction() {
+              
+              let x = document.getElementById("numb").value;
+              let text;
+        
+              if (isNaN(x) || x < 97 || x > 90) {
+                text = "Normal";
+              } else {
+                text = "temperature high";
+              }
+              document.getElementById("demo").innerHTML = text;
+            }    
+            </script>
+            TEMPERATURE
+        </h2>
+        <div class="form__group" onload="myFunction()">
+            <input type="text" class="form__input" id="numb"  placeholder="Temperature" required="" />
+            <label for="name" class="form__label">Enter your temperature</label>
+        </div>
+
+<p id="demo"></p>
+
+        <input type="button" onclick="myFunction()" value="Submit">
+    </body>
+</html>
